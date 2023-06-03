@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="h-full m-auto">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="h-full grid bg-[color:var(--lightGrey)]">
+  <main class="flex flex-col my-auto mx-auto bg-white rounded-2xl px-8 py-10 md:p-10 min-w-min lg:p-12 rounded-br-[10rem]">
+    <form id="dob-form">
+      <div class="flex gap-5 mb-4 md:pr-20 lg:pr-44">
+        <div class="flex flex-col gap-y-2">
+          <label class="font-bold text-sm text-[color:var(--smokeyGrey)]" for="date">DAY</label>
+          <input placeholder="DD" id="date" type="number"
+            class="placeholder:font-bold font-bold text-lg border border-[color:var(--lightGrey)] focus:outline-none focus:border-[color:var(--purple)] rounded-md w-24 md:w-24 lg:w-28 px-5 py-3">
+          <span class="error-msg text-[10px] italic text-[color:var(--lightRed)] hidden">This field is required</span>
+        </div>
+        <div class="flex flex-col gap-y-2">
+          <label class="font-bold text-sm text-[color:var(--smokeyGrey)]" for="month">MONTH</label>
+          <input placeholder="MM" id="month" type="number"
+            class="placeholder:font-bold font-bold text-lg border border-[color:var(--lightGrey)] focus:outline-none focus:border-[color:var(--purple)] rounded-md w-24 md:w-24 lg:w-28 px-5 py-3 ">
+          <span class="error-msg text-[10px] italic text-[color:var(--lightRed)] hidden">This field is required</span>
+        </div>
+        <div class="flex flex-col gap-y-2">
+          <label class="font-bold text-sm text-[color:var(--smokeyGrey)]" for="year">YEAR</label>
+          <input placeholder="YYYY" id="year" type="number"
+            class="placeholder:font-bold font-bold text-lg border border-[color:var(--lightGrey)] focus:outline-none focus:border-[color:var(--purple)] rounded-md w-24 md:w-24 lg:w-28 px-5 py-3 ">
+          <span class="error-msg text-[10px] italic text-[color:var(--lightRed)] hidden">This field is required</span>
+        </div>
+      </div>
+      <div class="flex flex-row items-center">
+        <hr class="border border-[color:var(--lightGrey)] w-full">
+        <button class="bg-[color:var(--purple)] hover:bg-[color:var(--offBlack)] p-4 rounded-full" type="submit"><img
+            src="./assets/images/icon-arrow.svg" alt="⬇️"></button>
+      </div>
+    </form>
+    <div class="flex flex-col">
+      <div class="flex">
+        <span id="yyyy" class="text-7xl tracking-widest text-[color:var(--purple)] italic font-bold">--</span>
+        <span class="text-5xl sm:text-6xl lg:text-7xl italic font-bold">years</span>
+      </div>
+      <div class="flex">
+        <span id="mm" class="text-7xl  tracking-widest text-[color:var(--purple)] italic font-bold">--</span>
+        <span class="text-5xl sm:text-6xl lg:text-7xl italic font-bold">months</span>
+      </div>
+      <div class="flex">
+        <span id="dd" class="text-7xl  tracking-widest text-[color:var(--purple)] italic font-bold">--</span>
+        <span class="text-5xl sm:text-6xl lg:text-7xl italic font-bold">days</span>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="./index.js"></script>
+</body>
+
+</html>
